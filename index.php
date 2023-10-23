@@ -23,8 +23,8 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID KARYAWAN</th>
-                    <th scope="col">NAMA LENGKAP</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">NAMA</th>
                     <th scope="col">JABATAN</th>
                     <th scope="col">JAM MASUK</th>
                     <th scope="col">JAM KELUAR</th>
@@ -51,6 +51,7 @@
                       <td class="text-center">
                       <a href="keluar.php?nik=<?php echo $row['nik'] ?>"class="btn btn-sm btn-primary">KELUAR</a>
                         <a href="hapus-karyawan.php?id=<?php echo $row['nik'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="edit.php?id=<?php echo $row['nik'] ?>" class="btn btn-sm btn-success">EDIT</a>
                       </td>
                   </tr>
 
