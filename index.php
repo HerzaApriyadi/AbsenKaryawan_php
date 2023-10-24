@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+
+
+if (!$_SESSION["username"]) {
+  header("Location: login.php");
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +26,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              DATA KARYAWAN
+              DATA KARYAWAN, ADMIN BY <?php echo  $_SESSION["username"] ?>
             </div>
             <div class="card-body">
               <a href="tambah-karyawan.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
@@ -58,6 +69,8 @@
                 <?php } ?>
                 </tbody>
               </table>
+
+              <a href="logout.php" class="btn btn-danger"> logout</a>
             </div>
           </div>
       </div>
